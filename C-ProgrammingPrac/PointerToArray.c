@@ -11,7 +11,8 @@ int main()
   
     int b[5] = { 1, 2, 3, 4, 5 }; 
   
-    int i = 0; 
+    /* Loop variable ,Comment added in 2.0.0 Test Branch */
+     int i = 0; 
   
     // Points to the whole array b 
   
