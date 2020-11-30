@@ -16,7 +16,8 @@ int main()
 	
 	if( (pid = fork()) > 0)  //Parent process
 	{
-		printf("This is printed from the context of Parent Process--------\n");
+		sleep(5);
+                printf("This is printed from the context of Parent Process--------\n");
                 
                 printf("Original Value of Global variable %d \n", my_global_var);
                 printf("Original Value of Local variable %d \n", my_local_var);
@@ -47,6 +48,7 @@ int main()
      
         
         printf("Hello After my th Process \n"); 
+        getchar();
 
 	return 0;
 }
