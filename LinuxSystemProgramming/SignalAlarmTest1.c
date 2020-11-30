@@ -6,7 +6,8 @@
 void my_sig_handler(int signumber)
 {
     printf("Alarm delivered signumber is %d\n", signumber);
-    system("/bin/ls");
+    //system("/bin/ls");
+    /* exit the process from here*/
     exit(0);	
 }
 
@@ -14,13 +15,17 @@ void my_sig_handler(int signumber)
 
 int main()
 {
+    
+    //signal(SIGALRM, my_sig_handler);
     alarm(5);
-    signal(SIGALRM, my_sig_handler);
 
 
     //start executing from this line only if not exited in signal handler.
-    for(;;)
+    while(1)
+   {
+    printf("Waiting for Signal handler\n");  
     sleep(1);
+   }
 	
     return 0;
 }
